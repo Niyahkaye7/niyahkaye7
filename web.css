@@ -18,13 +18,14 @@ header {
 header::after {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.15);
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.10);
     border-radius: 50%;
-    top: -100px;
-    right: -100px;
-    filter: blur(40px);
+    top: -150px;
+    right: -150px;
+    filter: blur(60px);
+    pointer-events: none;
 }
 section {
     max-width: 900px;
@@ -85,7 +86,6 @@ a:hover {
 .button:hover {
     background: #084a91;
 }
-/* glow */
 
 @media (max-width: 768px) {
     header {
