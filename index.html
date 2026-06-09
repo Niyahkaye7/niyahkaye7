@@ -153,9 +153,11 @@
 <img src="images/Headshot.JPG" alt="Niyah Brooks" class="profile-pic">
 <h1>Niyah Brooks</h1>
 
-<div class="subtitle">
+<h2 id="typing" class="subtitle"></h2>
+<p style="text-align:center; color:#a1a1a6;">
+    Alabama Agricultural & Mechanical University
+</p>
     Computer Science Student • Software Developer • Research Intern • Alabama A&M University
-</div>
 
 <p class="social-links">
     <a href="https://github.com/niyahkaye7" target="_blank">GitHub</a>
@@ -296,7 +298,7 @@
     function eraseText () {
         if (charIndex > 0) {
             typingElement.textContent =
-                titles[tittleIndex].substring(0, charIndex -1);
+                titles[titleIndex].substring(0, charIndex -1);
             charIndex--;
             setTimeout(eraseText, 50);
         } else {
