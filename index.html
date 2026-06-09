@@ -271,5 +271,41 @@
     Built with HTML & CSS |
     Hosted on GitHub Pages
 </footer>
+<script>
+    const titles = [
+        "Computer Science Student",
+        "Software Developer",
+        "Research Intern",
+        "Adobe Certified Designer"
+    ];
+
+    let titleIndex = 0;
+    let charIndex = 0;
+    let typingElement = document.getElementById("typing");
+
+    function typeText() {
+        if (charIndex < titles[titleIndex].length){
+            typingElement.textContent += titles[titleIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 100);
+        } else {
+            setTimeout(eraseText, 2000);
+        }
+    }
+
+    function eraseText () {
+        if (charIndex > 0) {
+            typingElement.textContent =
+                titles[tittleIndex].substring(0, charIndex -1);
+            charIndex--;
+            setTimeout(eraseText, 50);
+        } else {
+            titleIndex = (titleIndex + 1) % titles.length;
+            setTimeout(typeText, 500);
+        }
+    }
+
+typeText();
+</script>
 </body>
 </html>
