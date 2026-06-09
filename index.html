@@ -161,6 +161,9 @@
         .light-mode .subtitle {
             color: #555;
         }
+        .light-mode::before{
+            display: none;
+        }
 
         .light-mode a{
             color: #0066cc;
@@ -182,7 +185,6 @@
 </p>
 <p style="text-align:center;">
     <button id="theme-toggle" class="button">
-        ton id="theme-toggle" class="button">
         🌙 Light Mode
     </button>
 </p>
@@ -295,7 +297,6 @@
     Hosted on GitHub Pages
 </footer>
 <script>
-<script>
 const themeButton = document.getElementById("theme-toggle");
 
 themeButton.addEventListener("click", () => {
@@ -306,7 +307,9 @@ themeButton.addEventListener("click", () => {
     } else {
         themeButton.textContent = "🌙 Light Mode";
     }
-});    const titles = [
+});    
+    
+    const titles = [
         "Computer Science Student",
         "Software Developer",
         "Research Intern",
