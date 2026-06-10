@@ -56,15 +56,41 @@
             z-index: 1;
         }
 
-        .grid {
+        .dashboard {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-column: 300px 1fr;
+            gap: 25px;
         }
 
-        @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr 1fr;
+        .sidebar {
+            background:rgba(255,255,255,.08);
+            border:1px solid rgba(255,255,255,.12);
+            backdrop-filter:blur(20px);
+            border-radius:18px;
+            padding:25px;
+            height:fir-content;
+            position:sticky;
+            top:20px;
+        }
+
+        .main-content {
+            display:grid;
+            grid-template-column:1fr 1fr;
+            gap:20px;
+        }
+
+        @media(max-width:900px){
+            .dashboard{
+                grid-template-columns:1fr;
+            }
+            .main-content{
+                grid-template-columns:1fr;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .dashboard {
+                grid-template-columns: 1fr;
             }
         }
         .card {
@@ -171,25 +197,47 @@
     </style>
 </head>
 <body>
-<img src="images/Headshot.JPG" alt="Niyah Brooks" class="profile-pic">
-<h1>Niyah Brooks</h1>
-
-<h2 id="typing" class="subtitle"></h2>
-<p style="text-align:center; color:#a1a1a6;">
-    Alabama Agricultural & Mechanical University
-</p>
-<p class="social-links">
-    <a href="https://github.com/niyahkaye7" target="_blank">GitHub</a>
-    |
-    <a href="https://www.linkedin.com/in/niyah-brooks-4a4b8b248/" target="_blank">LinkedIn</a>
-</p>
-<p style="text-align:center;">
-    <button id="theme-toggle" class="button">
-        🌙 Light Mode
-    </button>
-</p>
 <div class="container">
-    <div class="grid">
+    <div class="dashboard">
+        <aside class="sidebar">
+            <img src="images/Headshot.JPG"
+                alt="Niyah Brooks"
+                class="profile-pic">
+            <h2>Niyah Brooks</h2>
+            <h3 id="typing" class="subtitlee"></h3>
+
+            <p>Alabama Agricultural and Mechanical University</p>
+
+            <p>
+                <a href="mailto:niyahbrooks353@gmail.com">
+                    niyahbrooks353@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/niyahkaye7" target="_blank">
+                    GitHub
+                </a>
+            </p>
+
+            <p>
+                <a href="https://wwww.linkedin.com/in/niyah-brooks-4a4b8b248/"
+                    target="_blank">
+                    LinkedIn
+                </a>
+            </p>
+
+            <br>
+
+            <a href="Niyah_Brooks_Resume-100pdf.pdf"
+                download
+                class="button">
+                Resume
+            </a>
+        </aside>
+
+        <main class="main-content">
+         
 
         <div class="card">
             <h2>About Me</h2>
