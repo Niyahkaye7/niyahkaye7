@@ -58,7 +58,7 @@
 
         .dashboard {
             display: grid;
-            grid-template-column: 300px 1fr;
+            grid-template-columns: 300px 1fr;
             gap: 25px;
         }
 
@@ -68,14 +68,14 @@
             backdrop-filter:blur(20px);
             border-radius:18px;
             padding:25px;
-            height:fir-content;
+            height:fit-content;
             position:sticky;
             top:20px;
         }
 
         .main-content {
             display:grid;
-            grid-template-column:1fr 1fr;
+            grid-template-columns:1fr 1fr;
             gap:20px;
         }
 
@@ -88,11 +88,6 @@
             }
         }
 
-        @media (min-width: 900px) {
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-        }
         .card {
             background: rgba(255,255,255, 0.08);
             border: 1px solid rgba(255,255,255, 0.12);
@@ -204,7 +199,7 @@
                 alt="Niyah Brooks"
                 class="profile-pic">
             <h2>Niyah Brooks</h2>
-            <h3 id="typing" class="subtitlee"></h3>
+            <h3 id="typing" class="subtitle"></h3>
 
             <p>Alabama Agricultural and Mechanical University</p>
 
@@ -221,7 +216,7 @@
             </p>
 
             <p>
-                <a href="https://wwww.linkedin.com/in/niyah-brooks-4a4b8b248/"
+                <a href="https://www.linkedin.com/in/niyah-brooks-4a4b8b248/"
                     target="_blank">
                     LinkedIn
                 </a>
@@ -234,6 +229,12 @@
                 class="button">
                 Resume
             </a>
+
+            <br><br>
+
+            <button id="theme-toggle" class'"button">
+                🌙 Light Mode
+            </button>
         </aside>
 
         <main class="main-content">
@@ -334,7 +335,7 @@
                     View Profile
                 </a>
             </p>
-        </div>
+        </main>
 
     </div>
 </div>
